@@ -23,6 +23,3 @@ module.exports = {
     app
 }
 
-app([0,0,0,0])
-
-console.log(app())
