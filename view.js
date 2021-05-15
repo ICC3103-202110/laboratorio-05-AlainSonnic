@@ -1,17 +1,32 @@
-
-
 const { printTable } = require('console-table-printer');
+const figlet = require('figlet');
+const chalk = require('chalk');
 
-function viewapp(ba,tipp,tip,Total){
+
+function viewapp(d){
     const testCases = [
-        { "Bill Amount": ba, "tip (%)": tipp, "tip": tip,"Total $": Total},
+        { "Bill Amount": d[0], "tip (%)": d[1], "tip": d[2],"Total $": d[3]},
       ];
     return printTable(testCases);
 }
 
 
+function getTitle(){
+    return chalk.green(
+        figlet.textSync(
+            'Tip Calculator',
+            {
+                horizontalLayout: 'full',
+                font: 'Nancyj-Underlined'
+            }
+        )
+    )
+}
+
+
+
 module.exports = {
+    getTitle,
     viewapp
 }
 
-console.log(viewapp(1000,50,500,1500))
