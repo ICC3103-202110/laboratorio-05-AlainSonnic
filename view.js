@@ -7,7 +7,9 @@ function viewapp(d){
     const testCases = [
         { "Bill Amount": d[0], "tip (%)": d[1], "tip": d[2],"Total $": d[3]},
       ];
-    return printTable(testCases);
+    
+    printTable(testCases);
+    return d
 }
 
 
@@ -22,7 +24,6 @@ function getTitle(){
         )
     )
 }
-
 
 
 module.exports = {

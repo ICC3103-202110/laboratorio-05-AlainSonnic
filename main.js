@@ -1,13 +1,13 @@
 
+const { printTable } = require('console-table-printer');
+const figlet = require('figlet');
+const chalk = require('chalk');
 const {viewapp,getTitle} = require('./view')
 const {update_table} = require('./update')
-const {ask} = require('./app')
+const {app} = require('./app')
 
 
 
-console.log(getTitle());
-const e = ask();
-const d = update_table(e);
-v = viewapp(d);
-console.log(v);
+app([0,0,0,0])
 
+console.log(app())

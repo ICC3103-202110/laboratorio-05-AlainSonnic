@@ -2,10 +2,10 @@ const {inputForm, listForm} = require('./view')
 const {printTable} = require('console-table-printer')
 
 
-function update_table(e){                            /* bill amount, tip%*/
-    const tip = (e[0] * (e[1]/100))
-    const total = e[0] + e[1]
-    return ([e[0],e[1],tip,total])  
+function update_table(bill_amount,tipper){                            /* bill amount, tip%*/
+    const tip_1 = (Number(bill_amount) * Number((tipper)/100))
+    const total = (Number(bill_amount) + Number(tip_1))
+    return [bill_amount,tipper,tip_1,total] 
 }                 
 
 
