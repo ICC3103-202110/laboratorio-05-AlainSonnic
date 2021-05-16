@@ -12,12 +12,11 @@ function app(d){
         console.log(getTitle());
         console.log(viewapp(currentView));
         const prompt = require('prompt-sync')();
-        const ba_2 = prompt("Bill Amount ?  :");
-        const tipp_2 = prompt("tip (%) ?   :");
+        const ba_2 = Number(prompt("Bill Amount ?  :"));
+        const tipp_2 = Number(prompt("tip (%) ?   :"));
         d = update_table(ba_2, tipp_2);
     }
 }
-
 
 module.exports = {
     app

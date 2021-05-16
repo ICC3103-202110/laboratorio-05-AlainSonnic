@@ -9,5 +9,4 @@ const {app} = require('./app')
 
 
 app([0,0,0,0])
-
 console.log(app())

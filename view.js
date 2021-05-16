@@ -6,10 +6,10 @@ const chalk = require('chalk');
 function viewapp(d){
     const testCases = [
         { "Bill Amount": d[0], "tip (%)": d[1], "tip": d[2],"Total $": d[3]},
-      ];
-    
+    ];
+  
     printTable(testCases);
-    return d
+    return (d);
 }
 
 
